@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
   res.send("home");
 });
 
+const gameRoute = require("./Routes/gameRouter");
+app.use("/gamedata", gameRoute);
+
 mongoose
   .connect(process.env.REACT_APP_DB_CONNECTION, {
     useNewUrlParser: true,
