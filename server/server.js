@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Pick up React index.html file
-this.app.use(express.static(path.join(__dirname, "../build/index.html")));
+app.use(express.static(path.join(__dirname, "../build/index.html")));
 
 //import routes
 app.get("/", (req, res) => {
