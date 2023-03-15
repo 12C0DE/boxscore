@@ -3,9 +3,13 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv/config");
+const path = require("path");
 
 app.use(cors());
 app.use(express.json());
+
+// Pick up React index.html file
+this.app.use(express.static(path.join(__dirname, "../build/index.html")));
 
 //import routes
 app.get("/", (req, res) => {
@@ -27,4 +31,4 @@ mongoose
   .catch((err) => console.error(err));
 
 //listen to the server
-app.listen(5400);
+app.listen(process.env.REACT_APP_PORT || 5400);
