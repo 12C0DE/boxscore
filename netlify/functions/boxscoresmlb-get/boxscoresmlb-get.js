@@ -11,18 +11,20 @@ const handler = async (event) => {
     const results = await collection.findOne(
       {},
       {
-        "away_team.abbreviation": 1,
-        "away_team.full_name": 1,
-        away_period_scores: 1,
-        "away_batter_totals.runs": 1,
-        "away_batter_totals.hits": 1,
-        away_errors: 1,
-        "home_team.abbreviation": 1,
-        "home_team.full_name": 1,
-        home_period_scores: 1,
-        "home_batter_totals.runs": 1,
-        "home_batter_totals.hits": 1,
-        home_errors: 1,
+        projection: {
+          "away_team.abbreviation": 1,
+          "away_team.full_name": 1,
+          away_period_scores: 1,
+          "away_batter_totals.runs": 1,
+          "away_batter_totals.hits": 1,
+          away_errors: 1,
+          "home_team.abbreviation": 1,
+          "home_team.full_name": 1,
+          home_period_scores: 1,
+          "home_batter_totals.runs": 1,
+          "home_batter_totals.hits": 1,
+          home_errors: 1,
+        },
       }
     );
     return {
