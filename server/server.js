@@ -19,12 +19,15 @@ app.get("/", (req, res) => {
 const gameRoute = require("./Routes/gameRouter");
 app.use("/gamedata", gameRoute);
 
+// Catch all requests that don't match any route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
+
 mongoose
   .connect(process.env.REACT_APP_DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    //   useCreateIndex: true,
-    //   useFindAndModify: false,
     dbName: process.env.REACT_APP_DB_NAME,
   })
   .then(() => console.log("connected db"))
