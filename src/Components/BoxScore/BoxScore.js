@@ -7,7 +7,12 @@ export const BoxScore = ({ league }) => {
   const dataRef = useRef();
 
   useEffect(() => {
-    fetch(`/gamedata/${league}/boxscore`)
+    const boxScoreURL =
+      league === "MLB"
+        ? "https://boxscore.netlify.app/.netlify/functions/boxscoresmlb-get"
+        : "https://boxscore.netlify.app/.netlify/functions/boxscoresNba-get";
+
+    fetch(boxScoreURL)
       .then((res) => res.json())
       .then((data) => {
         dataRef.current = data;
