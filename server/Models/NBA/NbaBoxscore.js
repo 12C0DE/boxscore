@@ -1,7 +1,3 @@
-// import { PlayerStatsSchema } from "./Player";
-// const PlayerStatsSchema = require("./Player");
-// const TeamSchema = require("../Team");
-// const TotalsSchema = require("./Totals");
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 

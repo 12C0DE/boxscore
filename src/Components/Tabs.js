@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Tab } from "@mui/material";
+import { Paper, Tab } from "@mui/material";
 import { BoxScore } from "./BoxScore/BoxScore";
 
 export const TabsView = () => {
@@ -13,18 +13,24 @@ export const TabsView = () => {
   };
 
   return (
-    <Box sx={{ width: "80%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={tabValue}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab label="MLB" value="MLB" />
-          <Tab label="NBA" value="NBA" />
-        </Tabs>
-      </Box>
-      <BoxScore league={tabValue} />
-    </Box>
+    <div className="xs:w-full w-11/12 flex justify-center mx-auto">
+      <Paper
+        elevation={2}
+        sx={{ padding: "20px", bgcolor: "#FBF9F9" }}
+        className="mx-auto"
+      >
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Tabs
+            value={tabValue}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="MLB" value="MLB" />
+            <Tab label="NBA" value="NBA" />
+          </Tabs>
+        </Box>
+        <BoxScore league={tabValue} />
+      </Paper>
+    </div>
   );
 };
