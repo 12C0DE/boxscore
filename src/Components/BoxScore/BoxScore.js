@@ -7,7 +7,7 @@ export const BoxScore = ({ league }) => {
   const dataRef = useRef();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/gamedata/${league}/boxscore`)
+    fetch(`/gamedata/${league}/boxscore`)
       .then((res) => res.json())
       .then((data) => {
         dataRef.current = data;

@@ -27,4 +27,4 @@ mongoose
   .catch((err) => console.error(err));
 
 //listen to the server
-app.listen(3001);
+app.listen(5400);

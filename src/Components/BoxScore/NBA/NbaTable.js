@@ -29,15 +29,15 @@ export const NbaTable = ({ data }) => {
             borderAxis="bothBetween"
           >
             <thead>
-              <tr>
+              <tr className="text-lg">
                 <th></th>
                 {data.home_period_scores?.map((col, index) => (
-                  <th key={`hc${index}`} className="text-base font-semibold">
+                  <th key={`hc${index}`} className="font-semibold">
                     {index + 1}
                   </th>
                 ))}
                 <th>
-                  <strong>Total</strong>
+                  <strong>T</strong>
                 </th>
               </tr>
             </thead>
