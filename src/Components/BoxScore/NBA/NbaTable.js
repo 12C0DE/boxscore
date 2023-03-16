@@ -52,7 +52,7 @@ export const NbaTable = ({ data }) => {
                 <td>{data.away_totals?.points}</td>
               </tr>
               <tr>
-                <td>
+                <td className="xs:text-sm xs:font-semibold text-base font-bold">
                   <strong>{data.home_team?.abbreviation}</strong>
                 </td>
                 {data.home_period_scores?.map((score, index) => (

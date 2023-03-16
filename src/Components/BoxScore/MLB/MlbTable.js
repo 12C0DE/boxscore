@@ -70,8 +70,8 @@ export const MlbTable = ({ data }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="xs:text-sm xs:font-semibold text-base font-bold">
-                    <strong>{data?.away_team.abbreviation}</strong>
+                  <td className="xs:text-sm xs:font-semi text-base font-semibold">
+                    {data?.away_team.abbreviation}
                   </td>
                   {data?.away_period_scores.map((score, index) => (
                     <td key={`as${index}`}>{score}</td>
@@ -88,7 +88,7 @@ export const MlbTable = ({ data }) => {
                 </tr>
                 <tr>
                   <td className="xs:text-sm xs:font-semibold text-base font-bold">
-                    <strong>{data?.home_team.abbreviation}</strong>
+                    {data?.home_team.abbreviation}
                   </td>
                   {data.home_period_scores?.map((score, index) => (
                     <td key={`hs${index}`}>{score}</td>
