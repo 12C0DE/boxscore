@@ -12,8 +12,12 @@ export const NbaTable = ({ data }) => {
         className="xs:mt-8 grid flex-wrap md:flex-nowrap justify-center"
         direction="row"
       >
-        <div className="flex flex-row flex-nowrap flex-shrink mx-2 items-center order-0 pb-2">
-          <TeamName name={data?.away_team?.full_name} side="AWAY" />
+        <div className="flex flex-row flex-nowrap mx-2 items-center order-0 pb-2">
+          <TeamName
+            name={data?.away_team?.full_name}
+            abbr={data?.away_team?.abbreviation}
+            side="AWAY"
+          />
           <div className="text-lg font-semibold sm:text-2xl sm:font-bold flex flex-row">
             <div>{data?.away_totals?.points}</div>
             <div>
@@ -82,7 +86,11 @@ export const NbaTable = ({ data }) => {
             </div>
             <div>{data?.home_totals?.points}</div>
           </div>
-          <TeamName name={data?.home_team?.full_name} side="HOME" />
+          <TeamName
+            name={data?.home_team?.full_name}
+            abbr={data?.home_team?.abbreviation}
+            side="HOME"
+          />
         </div>
       </Stack>
     </div>
