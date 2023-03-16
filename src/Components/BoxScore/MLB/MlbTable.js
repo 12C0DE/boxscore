@@ -53,7 +53,7 @@ export const MlbTable = ({ data }) => {
           </Stack>
           <Paper elevation={2}>
             <Table
-              sx={{ "& tr > *": { textAlign: "center" } }}
+              sx={{ "& tr > *": { textAlign: "center" }, minWidth: "400px" }}
               stripe={"odd"}
               borderAxis="bothBetween"
             >
@@ -70,7 +70,7 @@ export const MlbTable = ({ data }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="xs:text-sm xs:font-semi text-base font-semibold">
+                  <td className="xs:text-sm text-base font-semibold">
                     {data?.away_team.abbreviation}
                   </td>
                   {data?.away_period_scores.map((score, index) => (
@@ -87,7 +87,7 @@ export const MlbTable = ({ data }) => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="xs:text-sm xs:font-semibold text-base font-bold">
+                  <td className="xs:text-sm text-base font-semibold">
                     {data?.home_team.abbreviation}
                   </td>
                   {data.home_period_scores?.map((score, index) => (

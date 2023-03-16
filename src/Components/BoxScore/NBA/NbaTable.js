@@ -53,7 +53,7 @@ export const NbaTable = ({ data }) => {
               </tr>
               <tr>
                 <td className="xs:text-sm xs:font-semibold text-base font-bold">
-                  <strong>{data.home_team?.abbreviation}</strong>
+                  {data.home_team?.abbreviation}
                 </td>
                 {data.home_period_scores?.map((score, index) => (
                   <td key={`as${index}`}>{score}</td>
