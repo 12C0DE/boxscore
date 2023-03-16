@@ -34,7 +34,7 @@ export const MlbTable = ({ data }) => {
                 )}
               </div>
             </Stack>
-            <div className="text-base font-semibold">
+            <div className="text-xl font-semibold self-center text-gray-500">
               {data?.event_information?.status === "completed"
                 ? "F"
                 : data?.event_information?.status}
@@ -56,19 +56,22 @@ export const MlbTable = ({ data }) => {
               <TeamName name={data?.home_team?.full_name} side="HOME" />
             </Stack>
           </Stack>
-          <Paper elevation={2}>
+          <Paper elevation={2} style={{ maxWidth: "1100px" }}>
             <Table
               sx={{
                 "& tr > *": { textAlign: "center" },
-                minWidth: "400px",
-                overflowX: "auto",
+                paddingBottom: "5px",
               }}
+              overflowX="scroll"
               stripe={"odd"}
               borderAxis="bothBetween"
             >
               <thead>
-                <tr className="sm:text-md text-lg">
-                  <th></th>
+                <tr className="text-md md:text-lg">
+                  <th
+                    className="shrink-0"
+                    style={{ width: "10%", paddingX: "3px" }}
+                  ></th>
                   {data?.home_period_scores.map((col, index) => (
                     <th key={`hc${index}`}>{index + 1}</th>
                   ))}
@@ -79,7 +82,7 @@ export const MlbTable = ({ data }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="xs:text-sm text-base font-semibold">
+                  <td className="text-xs font-semibold px-1 md:text-base">
                     {data?.away_team.abbreviation}
                   </td>
                   {data?.away_period_scores.map((score, index) => (
@@ -96,7 +99,7 @@ export const MlbTable = ({ data }) => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="xs:text-sm text-base font-semibold">
+                  <td className="text-xs font-semibold px-1 md:text-base">
                     {data?.home_team.abbreviation}
                   </td>
                   {data.home_period_scores?.map((score, index) => (

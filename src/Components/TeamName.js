@@ -9,7 +9,7 @@ export const TeamName = ({ name, side }) => {
         marginRight: side === "HOME" ? "0px" : "10px",
       }}
     >
-      <div className="text-sm font-semibold">{name}</div>
+      <div className="text-xs font-semibold sm:text-sm">{name}</div>
       <div className="text-center text-gray-400" style={{ fontSize: "10px" }}>
         {side}
       </div>

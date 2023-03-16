@@ -8,8 +8,11 @@ import { TeamName } from "../../TeamName";
 export const NbaTable = ({ data }) => {
   return (
     <div className="">
-      <Stack className="mt-8 flex-wrap" direction="row">
-        <div className="flex flex-row mx-2 items-center order-1">
+      <Stack
+        className="xs:mt-8 grid flex-wrap md:flex-nowrap justify-center"
+        direction="row"
+      >
+        <div className="flex flex-row flex-nowrap mx-2 items-center order-0 pb-2">
           <TeamName name={data?.away_team?.full_name} side="AWAY" />
           <div className="text-2xl font-bold flex flex-row">
             <div>{data?.away_totals?.points}</div>
@@ -22,10 +25,7 @@ export const NbaTable = ({ data }) => {
             </div>
           </div>
         </div>
-        <Paper
-          elevation={2}
-          className="xs:order-last xs:row-span-full sm:order-2 sm:row-auto"
-        >
+        <Paper elevation={2} className="max-w-lg order-2 md:order-1">
           <Table
             sx={{ "& tr > *": { textAlign: "center" } }}
             stripe={"odd"}
@@ -66,7 +66,7 @@ export const NbaTable = ({ data }) => {
             </tbody>
           </Table>
         </Paper>
-        <div className="flex flex-row items-center mx-2 order-3">
+        <div className="flex flex-row flex-nowrap items-center mx-2 order-1 md:order-2 pb-2">
           <div className="text-2xl font-bold flex flex-row">
             <div>
               {data?.away_totals?.points < data?.home_totals?.points ? (

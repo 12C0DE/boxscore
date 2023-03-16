@@ -12,11 +12,11 @@ export const TabsView = () => {
   };
 
   return (
-    <div className="xs:w-full md:w-11/12 flex justify-center mx-auto">
+    <div className="w-full md:w-11/12 flex justify-center mx-auto mb-6">
       <Paper
         elevation={4}
-        sx={{ padding: "20px", bgcolor: "#FBF9F9" }}
-        className="mx-auto"
+        sx={{ paddingX: { xs: "2px", sm: "20px" }, bgcolor: "#FBF9F9" }}
+        className="mx-auto pb-5"
       >
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
