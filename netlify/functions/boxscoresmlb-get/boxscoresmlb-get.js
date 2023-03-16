@@ -24,6 +24,7 @@ const handler = async (event) => {
           "home_batter_totals.runs": 1,
           "home_batter_totals.hits": 1,
           home_errors: 1,
+          "event_information.status": 1,
         },
       }
     );

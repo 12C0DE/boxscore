@@ -12,7 +12,7 @@ export const TabsView = () => {
   };
 
   return (
-    <div className="xs:w-full w-11/12 flex justify-center mx-auto">
+    <div className="xs:w-full md:w-11/12 flex justify-center mx-auto">
       <Paper
         elevation={4}
         sx={{ padding: "20px", bgcolor: "#FBF9F9" }}

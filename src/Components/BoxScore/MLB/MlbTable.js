@@ -34,6 +34,11 @@ export const MlbTable = ({ data }) => {
                 )}
               </div>
             </Stack>
+            <div className="text-base font-semibold">
+              {data?.event_information?.status === "completed"
+                ? "F"
+                : data?.event_information?.status}
+            </div>
             <Stack
               direction="row"
               alignItems="center"
@@ -53,7 +58,11 @@ export const MlbTable = ({ data }) => {
           </Stack>
           <Paper elevation={2}>
             <Table
-              sx={{ "& tr > *": { textAlign: "center" }, minWidth: "400px" }}
+              sx={{
+                "& tr > *": { textAlign: "center" },
+                minWidth: "400px",
+                overflowX: "auto",
+              }}
               stripe={"odd"}
               borderAxis="bothBetween"
             >

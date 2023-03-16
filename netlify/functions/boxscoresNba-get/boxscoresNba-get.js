@@ -20,6 +20,7 @@ const handler = async (event) => {
           "home_team.full_name": 1,
           home_period_scores: 1,
           "home_totals.points": 1,
+          "event_information.status": 1,
         },
       }
     );
