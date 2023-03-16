@@ -36,7 +36,7 @@ export const MlbTable = ({ data }) => {
             </Stack>
             <div className="text-xl font-semibold self-center text-gray-500">
               {data?.event_information?.status === "completed"
-                ? "F"
+                ? "Final"
                 : data?.event_information?.status}
             </div>
             <Stack
