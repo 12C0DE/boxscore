@@ -58,7 +58,7 @@ export const MlbTable = ({ data }) => {
               borderAxis="bothBetween"
             >
               <thead>
-                <tr className="text-lg">
+                <tr className="sm:text-md text-lg">
                   <th></th>
                   {data?.home_period_scores.map((col, index) => (
                     <th key={`hc${index}`}>{index + 1}</th>
@@ -70,7 +70,7 @@ export const MlbTable = ({ data }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="text-base ">
+                  <td className="xs:text-sm xs:font-semibold text-base font-bold">
                     <strong>{data?.away_team.abbreviation}</strong>
                   </td>
                   {data?.away_period_scores.map((score, index) => (
@@ -87,7 +87,7 @@ export const MlbTable = ({ data }) => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="text-base">
+                  <td className="xs:text-sm xs:font-semibold text-base font-bold">
                     <strong>{data?.home_team.abbreviation}</strong>
                   </td>
                   {data.home_period_scores?.map((score, index) => (
