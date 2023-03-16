@@ -3,7 +3,7 @@ import Table from "@mui/joy/Table";
 import { Paper, Stack } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { TeamName } from "../../TeamName";
+import { TeamName } from "./TeamName";
 
 export const MlbTable = ({ data }) => {
   return (
